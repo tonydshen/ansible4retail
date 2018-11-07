@@ -1,0 +1,11 @@
+---
+- hosts: linux721
+  remote_user: tshen
+
+  tasks:
+  - name: echo a file
+    shell: /usr/bin/echo "test file" >> /tmp/test.txt
+    ignore_errors: True
+
+  - name: test connection
+    ping:
