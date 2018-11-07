@@ -1,0 +1,11 @@
+bash-4.2$ cat /tmp/pb5
+---
+- hosts: linux721
+  remote_user: tshen
+  become: yes
+  become_method: sudo
+
+  tasks:
+    - name: uninstall nginx
+      yum: name=nginx state=absent
+bash-4.2$
